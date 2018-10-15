@@ -550,5 +550,6 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 
+cmake-build-*
 
 # End of https://www.gitignore.io/api/c,vim,c++,cmake,emacs,xcode,qtcreator,visualstudio,visualstudiocode
