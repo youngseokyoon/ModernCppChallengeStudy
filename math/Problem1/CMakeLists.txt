@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.3)
 
 # Use directory name for this project's name. 
 string(REGEX MATCH Problem.+ # Format: Project + Number
@@ -8,7 +8,12 @@ message(STATUS "${ProjectName}")
 
 project(${ProjectName} LANGUAGES CXX)
 
-add_executable(${PROJECT_NAME} main.cpp)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} -Wall)
+
+set(SOURCE_FILES
+        main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 
 if(MSVC)
     target_compile_options(${PROJECT_NAME}
