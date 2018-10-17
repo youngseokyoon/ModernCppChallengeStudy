@@ -8,9 +8,6 @@ message(STATUS "${ProjectName}")
 
 project(${ProjectName} LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} -Wall)
-
 set(SOURCE_FILES
         main.cpp)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
